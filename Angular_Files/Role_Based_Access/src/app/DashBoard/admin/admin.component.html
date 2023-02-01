@@ -1,0 +1,114 @@
+<div class="full">
+
+  <div class="card ">
+    <div class="card-body">
+      <table class="table table-bordered table-stripped table-dark">
+        <thead class="thead-dark text-center">
+          <tr>
+            <th scope="col">S.No.</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile Number</th>
+            <th scope="col">Gender</th>
+            <th scope="col" colspan="2">Action</th>
+            
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr *ngFor="let user of users,let i=index" >
+            <td *ngIf="currentuser != user.firstname">{{i+1}}</td>
+            <td *ngIf="currentuser != user.firstname">{{user.firstname}}</td>
+            <td *ngIf="currentuser != user.firstname">{{user.email}}</td>
+            <td *ngIf="currentuser != user.firstname">{{user.mobile}}</td>
+            <td *ngIf="currentuser != user.firstname">{{ user.gender }}</td>
+            <td *ngIf="currentuser != user.firstname"><button class="btn btn-primary" (click)="updatebyId(user.id,content)">Edit</button></td>
+            <td *ngIf="currentuser!= user.firstname"><button class="btn btn-danger" (click)="delete(user.id)">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+    
+  </div>
+<ng-template #content let-modal>
+  <div class="container">
+
+    <form  (ngSubmit)="onSubmit(f)" ngForm #f="ngForm"  class="border p-3 rounded-3">
+  
+      <div class="row g-0">
+        <div class="col text-center p-2 mb-3 bg-light">
+          <span class="fs-3">Registration form</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col mb-3" >
+          <label for="id" class="form-label">Id</label>
+          <input type="text" class="form-control" id="id"
+          [(ngModel)]="user.id"
+            disabled
+            ngModel
+              required
+              id
+              name="id"
+              #id="ngModel"
+              class="form-control">
+    
+        </div>
+          <div class="col mb-3" >
+            <label for="firstname" class="form-label">First name</label>
+            <input type="text" class="form-control" id="firstname"
+            [(ngModel)]="user.firstname"
+              ngModel
+                required
+                firstname
+                name="firstname"
+                #firstname="ngModel"
+                class="form-control">
+      
+          </div>
+      </div>
+      <div class="row">
+       
+    
+        <div class="col mb-3" >
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email"
+        
+            [(ngModel)]="user.email"
+              ngModel
+                required
+                email
+                name="email"
+                #email="ngModel"
+                class="form-control">
+        </div>
+       
+      </div>
+      <div class="row">
+    
+        <div class="col mb-3" >
+          <label for="mobile" class="form-label">Mobile Number</label>
+          <input type="text" class="form-control" id="mobile" 
+          [(ngModel)]="user.mobile"
+          ngModel
+            required
+            mobile
+            name="mobile"
+            #mobile="ngModel"
+            class="form-control">
+          
+        </div>
+    
+    </div>
+    <div class="row" >
+      <div class="col-6 offset-3">
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary" (click)="modal.close('Save click')">submit</button>
+        </div>
+      </div>
+    </div>
+    
+    </form>
+    </div>
+  
+</ng-template>

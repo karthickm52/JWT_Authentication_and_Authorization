@@ -1,0 +1,38 @@
+.container{
+  background-color: rgb(215, 243, 170);
+  margin-top: 70px;
+  width: 450px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.438);
+  padding: 25px 25px 25px 25px;
+  background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+.form-control{
+ 
+  margin-bottom: 20px;
+}
+.form-group{
+  margin-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+}
+.buton{
+  margin-top: 30px;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+.error{
+  color: red;
+}
+label{
+  font-size: 14px;
+
+}

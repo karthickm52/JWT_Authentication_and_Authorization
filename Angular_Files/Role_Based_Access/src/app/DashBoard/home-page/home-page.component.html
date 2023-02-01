@@ -1,0 +1,6 @@
+<div class="welcome-text">
+  <h1>
+Welcome {{currentUser}}</h1>
+<a *ngIf="currentRole==='admin'" routerLink="/admin">All Users</a>
+<a *ngIf="currentRole==='user'" routerLink="/user">All Users</a>
+</div>

@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="rows">
+    <form (ngSubmit)="onSubmit(f)"  ngForm #f="ngForm">
+      <div class="form-group">
+        <label for="user"><b>Email</b></label>
+        <input 
+        type="email" 
+        required
+        ngModel
+        name="email"
+        email
+        #email="ngModel"
+        class="form-control"
+         />
+        <span class="error" *ngIf="!email.valid && email.touched"><b>Please enter a email</b></span>
+      </div>
+      <div class="form-group">
+        <label for=""><b>Password</b></label>
+        <input 
+        type="password"
+        required
+        ngModel
+        name="password"
+        password
+        #password="ngModel"
+         class="form-control"
+         >
+        <span class="error" *ngIf="!password.valid && password.touched"><b>Please enter a password</b></span>
+        <span class="error" *ngIf="invalidMsg"><b>&nbsp;&nbsp;Invalid credentials</b></span>
+      </div>
+      <div class="buton" ><button class="btn btn-primary" style="width: 300px; margin-left: 20px;" type="submit">Submit
+      </button></div>
+    </form>
+  </div>
+</div>

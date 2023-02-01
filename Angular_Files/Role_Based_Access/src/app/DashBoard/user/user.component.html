@@ -1,0 +1,26 @@
+<div class="full">
+  <div class="card ">
+    <div class="card-body">
+      <table class="table table-bordered table-stripped table-dark">
+        <thead class="thead-dark text-center">
+          <tr>
+            <th scope="col">S.No.</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile Number</th>
+            <th scope="col">Gender</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr *ngFor="let user of users, let i=index">
+            <td>{{i+1}}</td>
+            <td>{{user.firstname}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.mobile}}</td>
+            <td>{{ user.gender }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

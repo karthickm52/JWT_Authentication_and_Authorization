@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+@font-face {
+  font-family: AstroSpace;
+  src: url(/fonts/AstroSpace.ttf);
+}
+
+
+header {
+  background-color: #141b25;
+}
+
+.main-nav {
+  height: 70px;
+}
+
+.logo {
+  color: white;
+  line-height: 70px;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 30px;
+  font-family: "AstroSpace", sans-serif;
+}
+
+.navlinks {
+  list-style: none;
+  float: right;
+  line-height: 70px;
+  
+}
+
+.navlinks li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.navlinks li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s linear 0s;
+  text-transform: uppercase;
+}
+
+
+.navlinks li a:hover {
+  color: #7ebcb9;
+  padding-bottom: 7px;
+  border-bottom: 2px solid #7ebcb9;
+}
+
+.home{
+  list-style: none;
+  display: inline-block;
+  margin-left:40px;
+  line-height: 70px;
+
+  
+}
+
+.home a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s linear 0s;
+  text-transform: uppercase;
+  
+}
+.home a:hover{
+  color: #065753;
+  padding-bottom: 7px;
+  border-bottom: 2px solid #7ebcb9;
+}

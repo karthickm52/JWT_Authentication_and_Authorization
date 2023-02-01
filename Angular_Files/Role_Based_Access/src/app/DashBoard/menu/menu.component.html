@@ -1,0 +1,17 @@
+<header>
+  <nav class="main-nav">   
+    <a href="" class="logo">Kumaran</a>
+    <li class="home">
+      <a *ngIf="auth.isUserLoggedin()" routerLink="/homepage" >Home</a>
+    </li>
+
+    <ul class="navlinks">
+      
+      <li><a *ngIf="!auth.isUserLoggedin()" routerLink="/signup">SignUp</a></li>
+      <li><a *ngIf="!auth.isUserLoggedin()" routerLink="/login">Login</a></li>
+      <li><a *ngIf="auth.currentRole()==='admin'" (click)="addUser()" style="cursor: pointer;">AddUser</a></li>
+      <li><a *ngIf="auth.isUserLoggedin()" routerLink="/" (click)="logout()">logout</a></li>
+    
+    </ul>
+  </nav>
+</header>

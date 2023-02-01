@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+body{
+  background-image: url(https://media.istockphoto.com/id/1226478932/photo/round-podium-or-pedestal-with-blue-background.jpg?b=1&s=170667a&w=0&k=20&c=AkUOd2vv2ce1SGV5Sf3hG0OzYFgWLmKXT8SrnXIxea8=);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  overflow-x: hidden;
+}
